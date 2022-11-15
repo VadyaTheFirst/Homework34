@@ -7,7 +7,5 @@ public class LicenseC extends Driver{
         setHasDriverLicense("C");
     }
 
-    public void drives(Bus bus){
-        System.out.println("Воодитель с правами категории С управляет " + bus.getModel());
-    }
+
 }

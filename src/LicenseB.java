@@ -9,8 +9,6 @@ public class LicenseB extends Driver {
     }
 
 
-    public void drive(Truck truck) {
-        System.out.println("Водитель с категорией B управляет " + truck.getModel());
-    }
+
 
 }
