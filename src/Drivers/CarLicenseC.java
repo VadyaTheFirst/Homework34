@@ -4,7 +4,7 @@ import Cars.Bus;
 import Cars.DrivenByLicenseB;
 import Cars.DrivenByLicenseC;
 
-public class CarLicenseC <T extends Bus & DrivenByLicenseC> {
+public class CarLicenseC <T extends Cars.Car & DrivenByLicenseC> {
     private T car;
     private CarDriver driver;
     private static final String licenceType = "C";

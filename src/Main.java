@@ -38,7 +38,7 @@ public class Main {
         licenseB.drives(carB);
 
 
-        CarDriver driverC=new CarDriver("Коля Бухой",false,4);
+        CarDriver driverC=new CarDriver("Коля Бухой",true,4);
         CarLicenseC<Bus> licenseC=new CarLicenseC<>(driverC);
         licenseC.drives(carC);
 

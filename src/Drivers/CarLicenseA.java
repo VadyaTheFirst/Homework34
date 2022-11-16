@@ -1,9 +1,10 @@
 package Drivers;
 
+import Cars.Car;
 import Cars.DrivenByLicenseA;
 import Cars.LightWeight;
 
-public class CarLicenseA<T extends LightWeight & DrivenByLicenseA>  {
+public class CarLicenseA<T extends Car & DrivenByLicenseA>  {
 private T car;
 private CarDriver driver;
 private static final String licenceType = "A";
