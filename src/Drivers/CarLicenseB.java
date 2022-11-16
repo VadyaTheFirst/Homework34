@@ -1,10 +1,10 @@
 package Drivers;
 
+import Cars.Bus;
 import Cars.Car;
-import Cars.DrivenByLicenseB;
 import Cars.Truck;
 
-public class CarLicenseB<T extends Car & DrivenByLicenseB> {
+public class CarLicenseB<T extends Truck> {
     private T car;
     private CarDriver driver;
     private static final String licenceType = "B";
@@ -18,7 +18,7 @@ public class CarLicenseB<T extends Car & DrivenByLicenseB> {
         if (!driver.getHasDriverLicense()){
             System.out.println("У этого водителя нет прав");
         } else {
-            System.out.println(driver.getFIO() + " с лицензией "+licenceType + car.drivenBy());
+            System.out.println(driver.getFIO() + " с лицензией "+licenceType + " "+car.getBrand());
         }
     }
 

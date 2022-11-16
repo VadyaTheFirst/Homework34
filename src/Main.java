@@ -8,6 +8,7 @@ import Drivers.CarLicenseC;
 public class Main {
     public static void main(String[] args) {
 
+
         Car[] cars = new Car[6];
         cars[0] = new LightWeight("Lada", "Granta",
                 2022,"Россия","Черная", 100,1.2f);
@@ -21,6 +22,13 @@ public class Main {
                 2019,"Германия","Желтый", 130,3.2f,30);
         cars[5]= new Truck("MAC", "Гтлтщцт",
                 2021,"Sweden","Синий", 130,4.2f,8.5f);
+
+
+
+        for (Car car : cars) {
+            System.out.println(car.toString());
+
+        }
 
         LightWeight carA= new LightWeight("Lada", "Granta",
                 2022,"Россия","Черная", 100,1.2f);
@@ -41,6 +49,9 @@ public class Main {
         CarDriver driverC=new CarDriver("Коля Бухой",false,4);
         CarLicenseC<Bus> licenseC=new CarLicenseC<>(driverC);
         licenseC.drives(carC);
+
+
+
 
 
         }
