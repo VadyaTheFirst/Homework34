@@ -1,9 +1,7 @@
 package Cars;
 
-import Cars.Car;
-import Cars.Challenging;
 
-public final class LightWeight extends Car implements Challenging {
+public final class LightWeight extends Car implements Challenging, DrivenByLicenseA {
 
     public LightWeight(String brand, String model, int year, String country, String color, Integer maxSpeed, float engineVolume) {
         super(brand, model, year, country, color, maxSpeed, engineVolume);
@@ -26,5 +24,10 @@ public final class LightWeight extends Car implements Challenging {
 
 
 
+    @Override
+    public String drivenBy() {
+        String s= " гоняет на "+getModel();
+            return s;
+        }
+    }
 
-}

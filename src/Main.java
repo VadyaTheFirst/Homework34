@@ -1,7 +1,9 @@
-import Cars.Bus;
-import Cars.Car;
-import Cars.LightWeight;
-import Cars.Truck;
+import Cars.*;
+
+import Drivers.CarDriver;
+import Drivers.CarLicenseA;
+import Drivers.CarLicenseB;
+import Drivers.CarLicenseC;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,17 +17,39 @@ public class Main {
                 1998,"Россия","Синий", 80,4.2f,12.5f);
         cars[3] = new LightWeight("Labborghini", "Galado",
                 2022,"Italy","Yellow", 340,12.5f);
-        cars[4] = new Bus("Mercedes-Benz", "?",
+        cars[4] = new Bus("Mercedes-Benz", "Крутой",
                 2019,"Германия","Желтый", 130,3.2f,30);
         cars[5]= new Truck("MAC", "Гтлтщцт",
                 2021,"Sweden","Синий", 130,4.2f,8.5f);
 
-        LicenseA<LightWeight> driverA=new LicenseA<>("Шумахер","A",10);
-        LicenseA.drive(cars[0]);
+        LightWeight carA= new LightWeight("Lada", "Granta",
+                2022,"Россия","Черная", 100,1.2f);
+        Truck carB= new Truck("МАЗ", "Камаз",
+                1998,"Россия","Синий", 80,4.2f,12.5f);
+        Bus carC = new Bus("Mercedes-Benz", "?",
+                2019,"Германия","Желтый", 130,3.2f,30);
+
+        CarDriver driverA=new CarDriver("Шумахер",true,5);
+        CarLicenseA<LightWeight> licenseA= new CarLicenseA<>(driverA);
+        licenseA.drives(carA);
+
+        CarDriver driverB=new CarDriver("Федя Волков",true,4);
+        CarLicenseB<Truck> licenseB= new CarLicenseB<>(driverB);
+        licenseB.drives(carB);
+
+
+        CarDriver driverC=new CarDriver("Коля Бухой",false,4);
+        CarLicenseC<Bus> licenseC=new CarLicenseC<>(driverC);
+        licenseC.drives(carC);
+
+
+        }
+
+
 
 
 
     }
-}
+
 
 

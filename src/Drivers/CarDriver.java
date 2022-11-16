@@ -1,13 +1,12 @@
-import Cars.Car;
-import Cars.Truck;
+package Drivers;
 
-public abstract class Driver {
+public class CarDriver {
 
     private final String FIO;
-    private String hasDriverLicense;
+    private boolean hasDriverLicense;
     private int workingExperience;
 
-    public Driver(String FIO, String hasDriverLicense, int workingExperience) {
+    public CarDriver(String FIO, boolean hasDriverLicense, int workingExperience) {
         this.FIO = FIO;
         this.hasDriverLicense = hasDriverLicense;
         this.workingExperience = workingExperience;
@@ -17,11 +16,11 @@ public abstract class Driver {
         return FIO;
     }
 
-    public String getHasDriverLicense() {
+    public boolean getHasDriverLicense() {
         return hasDriverLicense;
     }
 
-    public void setHasDriverLicense(String hasDriverLicense) {
+    public void setHasDriverLicense(boolean hasDriverLicense) {
         this.hasDriverLicense = hasDriverLicense;
     }
 
@@ -43,7 +42,4 @@ public abstract class Driver {
     public void refill(){
         System.out.println("Заправляю");
     }
-
-
-
 }

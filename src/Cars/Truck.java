@@ -3,7 +3,7 @@ package Cars;
 import Cars.Car;
 import Cars.Challenging;
 
-public final class Truck extends Car implements Challenging {
+public final class Truck extends Car implements Challenging,DrivenByLicenseB {
     private float loadCapacity;
 
     public Truck(String brand, String model, int year, String country, String color, Integer maxSpeed, float engineVolume, float loadCapacity) {
@@ -26,7 +26,16 @@ public final class Truck extends Car implements Challenging {
     }
 
     @Override
+    public String drivenBy() {
+       String s1=" гоняет на грузовике "+getModel()+" "+getBrand();
+        return s1;
+    }
+
+    @Override
     public void bestCircleTime() {
+
+
+
 
     }
 }

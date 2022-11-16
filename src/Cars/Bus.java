@@ -2,7 +2,7 @@ package Cars;
 
 import Cars.Car;
 
-public final class Bus extends Car implements Challenging {
+public final class Bus extends Car implements Challenging,DrivenByLicenseC {
     private int seatsNumber;
 
     @Override
@@ -32,4 +32,11 @@ public final class Bus extends Car implements Challenging {
 
 
     }
-}
+
+    @Override
+        public String drivenBy() {
+            String s1=" гоняет на автобусе "+getModel()+" "+getBrand();
+            return s1;
+        }
+    }
+
