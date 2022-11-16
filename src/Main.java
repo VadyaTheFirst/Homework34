@@ -48,7 +48,7 @@ public class Main {
 
         CarDriver driverC=new CarDriver("Коля Бухой",false,4);
         CarLicenseC<Bus> licenseC=new CarLicenseC<>(driverC);
-        licenseC.drives(carC);
+        licenseC.drives( carC);
 
 
 
