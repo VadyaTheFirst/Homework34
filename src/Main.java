@@ -38,17 +38,17 @@ public class Main {
                 2019,"Германия","Желтый", 130,3.2f,30);
 
         CarDriver driverA=new CarDriver("Шумахер",true,5);
-        CarLicenseA<LightWeight> licenseA= new CarLicenseA<>(driverA);
+        CarLicenseA licenseA= new CarLicenseA (driverA);
         licenseA.drives(carA);
 
         CarDriver driverB=new CarDriver("Федя Волков",true,4);
-        CarLicenseB<Truck> licenseB= new CarLicenseB<>(driverB);
+        CarLicenseB licenseB= new CarLicenseB (driverB);
         licenseB.drives(carB);
 
 
         CarDriver driverC=new CarDriver("Коля Бухой",false,4);
-        CarLicenseC<Bus> licenseC=new CarLicenseC<>(driverC);
-        licenseC.drives( carC);
+        CarLicenseC licenseC=new CarLicenseC (driverC);
+        licenseC.drives(carC);
 
 
 

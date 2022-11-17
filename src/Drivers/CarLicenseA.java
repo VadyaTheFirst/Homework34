@@ -3,22 +3,8 @@ package Drivers;
 import Cars.Car;
 import Cars.LightWeight;
 
-public class CarLicenseA <T extends LightWeight>  {
-private T car;
-private CarDriver driver;
-private static final String licenceType = "A";
-
+public class CarLicenseA extends CarLicense<LightWeight> {
     public CarLicenseA(CarDriver driver) {
-        this.driver = driver;
-
+        super(driver, "A");
     }
-
-    public void drives(T car){
-        if (!driver.getHasDriverLicense()){
-            System.out.println("У этого водителя нет прав");
-        } else {
-            System.out.println(driver.getFIO() + " с лицензией "+licenceType + " "+car.getBrand());
-        }
-    }
-
 }
